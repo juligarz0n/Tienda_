@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Natural</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Tienda Natural</h1>
+    <nav>
+      <ul>
+        <li><a href="#frutas">Frutas</a></li>
+        <li><a href="#verduras">Verduras</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seccion Frutas -->
+    <section id="frutas">
+      <h2>Frutas</h2>
+      <div class="subseccion">
+        <h3>Tropicales</h3>
+        <div class="galeria">
+          <div class="producto">
+            <img src="img/banano.webp" alt="Banano">
+            <p class="nombre-producto">Banano - Dulce y nutritivo</p>
+            <p>$2000 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Banano', 2000, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/mango.png" alt="Mango">
+            <p class="nombre-producto">Mango - Jugoso y tropical</p>
+            <p>$2500 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Mango', 2500, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/papaya.jpg" alt="Papaya">
+            <p class="nombre-producto">Papaya - Ideal para desayunos</p>
+            <p>$1800 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Papaya', 1800, this)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subseccion">
+        <h3>Cítricas</h3>
+        <div class="galeria">
+          <div class="producto">
+            <img src="img/naranja.jpg" alt="Naranja">
+            <p class="nombre-producto">Naranja - Rica en vitamina C</p>
+            <p>$1500 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Naranja', 1500, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/limon.jpg" alt="Limón">
+            <p class="nombre-producto">Limón - Refrescante</p>
+            <p>$1000 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Limón', 1000, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/mandarian.png" alt="Mandarina">
+            <p class="nombre-producto">Mandarina - Dulce y jugosa</p>
+            <p>$1600 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Mandarina', 1600, this)">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Verduras -->
+    <section id="verduras">
+      <h2>Verduras</h2>
+      <div class="subseccion">
+        <h3>Hojas verdes</h3>
+        <div class="galeria">
+          <div class="producto">
+            <img src="img/espinaca.jpg" alt="Espinaca">
+            <p class="nombre-producto">Espinaca - Rica en hierro</p>
+            <p>$1200 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Espinaca', 1200, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/lechuga.jpg" alt="Lechuga">
+            <p class="nombre-producto">Lechuga - Fresca para ensaladas</p>
+            <p>$1000 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Lechuga', 1000, this)">Agregar</button>
+          </div>
+          <div class="producto">
+            <img src="img/acelga.jpg" alt="Acelga">
+            <p class="nombre-producto">Acelga - Muy nutritiva</p>
+            <p>$1100 / Kg</p>
+            <input type="number" min="0.5" step="0.5" value="1">
+            <button class="btn-agregar" onclick="agregarAlCarrito('Acelga', 1100, this)">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Promociones -->
+    <section id="promociones">
+      <h2>Promociones</h2>
+      <p>¡Compra 5kg y recibe 1kg gratis en frutas seleccionadas!</p>
+    </section>
+
+    <!-- Seccion Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Correo: infojulinatural@tiendanatural.com</p>
+      <p>Teléfono: 310 240 1680</p>
+    </section>
+
+    <!-- Confirmación visual -->
+    <div id="mensaje-confirmacion">Producto agregado al carrito</div>
+  </main>
+
+  <aside id="carrito">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </aside>
+
+  <footer>
+    <p>© 2025 Tienda Natural</p>
+  </footer>
+</body>
+</html>
